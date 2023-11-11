@@ -2,15 +2,43 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Movies!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
         {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
+
     <body>
+        <div class="container">
+            <header class="d-flex justify-content-center py-3">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page" _msttexthash="111306" _msthash="14">Domicile</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" _msttexthash="326092" _msthash="15">Fonctionnalités</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" _msttexthash="95446" _msthash="16">Prisée</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" _msttexthash="363909" _msthash="17">Foire aux questions</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" _msttexthash="97383" _msthash="18">Environ</a></li>
+                </ul>
+            </header>
+        </div>
+        <div class="container">
         {% block body %}{% endblock %}
+        </div>
+        <div class="container">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary" _msttexthash="111306" _msthash="14">Domicile</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary" _msttexthash="326092" _msthash="15">Fonctionnalités</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary" _msttexthash="95446" _msthash="16">Prisée</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary" _msttexthash="363909" _msthash="17">Foire aux questions</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary" _msttexthash="97383" _msthash="18">Environ</a></li>
+                </ul>
+                <p class="text-center text-body-secondary" _msttexthash="327002" _msthash="19">© 2023 Société, Inc</p>
+            </footer>
+        </div>
     </body>
 </html>
