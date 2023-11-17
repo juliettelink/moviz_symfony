@@ -91,5 +91,5 @@ class UserCrudController extends AbstractCrudController
             $hash = $this->userPasswordHasher->hashPassword($this->getUser(), $password);
             $form->getData()->setPassword($hash);
         };
-    }
+    } 
 }
