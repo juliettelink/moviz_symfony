@@ -24,17 +24,17 @@ class ReviewRepository extends ServiceEntityRepository
 //    /**
 //     * @return Review[] Returns an array of Review objects
 //     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('r')
-//            ->andWhere('r.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('r.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+//pour créer une moyenne
+   public function getAverageRateByMovieId($movieId): float|null
+   {
+        return $this->createQueryBuilder('r')
+        ->select('AVG(r.rate) as averageRate')
+        ->where('r.movie = :movideId')
+        ->setParameter('movideId', $movieId)
+        ->getQuery()
+        ->getSingleScalarResult()
+    ;
+   }
 
 //    public function findOneBySomeField($value): ?Review
 //    {

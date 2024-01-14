@@ -7,14 +7,13 @@
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="{{ path('app_home') }}" class="nav-link px-2 link-secondary ">Accueil</a></li>
             <li><a href="{{ path('app_movies') }}" class="nav-link px-2 link-dark">Films</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">Prisée</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">Foire aux questions</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark" _msttexthash="97383" _msthash="19">Environ</a></li>
         </ul>
 
         <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-primary me-2" _msttexthash="256685" _msthash="20">Connectez-vous</button>
-            <button type="button" class="btn btn-primary" _msttexthash="1002209" _msthash="21">S’inscrire</button>
+            <a href="{{ path('app_login') }}" class="btn btn-outline-primary me-2">Connexion</a>
+            {# faire un if #}
+            <a href="{{ path('app_logout') }}" class="btn btn-primary">Déconnexion</a>
         </div>
     </header>
 </div>
+
